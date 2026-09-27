@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Urbanist:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  font-family: 'Urbanist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #F3F2F8;
+  background-color: #07050E;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: 'Urbanist', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.font-body {
+  font-family: 'Urbanist', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.font-ticker, .ticker-ribbon, .font-mono-ticker {
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, monospace, sans-serif;
+}
+
+/* Astrix Vibrant Text Gradients */
+.text-gradient {
+  background: linear-gradient(135deg, #FFFFFF 0%, #BFA5FF 50%, #7C5CFC 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-gradient-purple {
+  background: linear-gradient(135deg, #BFA5FF 0%, #7C5CFC 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Astrix Rounded Pill Button (Primary CTA) */
+.btn-primary {
+  background: linear-gradient(135deg, #7C5CFC 0%, #9E7FFF 100%);
+  color: #FFFFFF;
+  border-radius: 9999px;
+  box-shadow: 0 0 16px rgba(124, 92, 252, 0.4);
+  transition: transform 0.18s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.18s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.18s ease;
+}
+.btn-primary:hover:not(:disabled) {
+  background: linear-gradient(135deg, #8E6CFF 0%, #AF91FF 100%);
+  transform: translateY(-1.5px);
+  box-shadow: 0 0 24px rgba(124, 92, 252, 0.65);
+}
+.btn-primary:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 0 10px rgba(124, 92, 252, 0.4);
+}
+
+/* Astrix Solid Lavender Pill (Active State / Accent CTA) */
+.btn-lavender {
+  background: #BFA5FF;
+  color: #0B0814;
+  font-weight: 700;
+  border-radius: 9999px;
+  box-shadow: 0 0 16px rgba(191, 165, 255, 0.35);
+  transition: all 0.18s ease;
+}
+.btn-lavender:hover:not(:disabled) {
+  background: #D4C2FF;
+  transform: translateY(-1.5px);
+  box-shadow: 0 0 22px rgba(191, 165, 255, 0.55);
+}
+
+/* Astrix Dark Outlined Pill Button (Secondary CTA) */
+.btn-secondary {
+  background: #191436;
+  color: #F3F2F8;
+  border: 1px solid #31275E;
+  border-radius: 9999px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: border-color 0.18s ease, background 0.18s ease, color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+}
+.btn-secondary:hover:not(:disabled) {
+  border-color: #7C5CFC;
+  background: #231B4B;
+  color: #BFA5FF;
+  transform: translateY(-1px);
+  box-shadow: 0 0 16px rgba(124, 92, 252, 0.25);
+}
+.btn-secondary:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+/* Astrix Elevated Dark Surface Card */
+.card {
+  background: #15102A;
+  border: 1px solid #261E4E;
+  border-radius: 1.25rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+  color: #F3F2F8;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-hover:hover {
+  border-color: rgba(124, 92, 252, 0.6);
+  box-shadow: 0 0 24px rgba(124, 92, 252, 0.22), 0 12px 36px rgba(0, 0, 0, 0.5);
+  transform: translateY(-3px);
+}
+
+/* Glassmorphism Dark Nav & Cards */
+.glass-nav {
+  background: rgba(11, 8, 20, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(38, 30, 78, 0.8);
+}
+
+.glass-card {
+  background: rgba(21, 16, 42, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(59, 46, 117, 0.6);
+}
+
+/* Astrix Rounded Capsule Inputs */
+.input-modern {
+  width: 100%;
+  border-radius: 9999px;
+  border: 1px solid #2B2353;
+  background: #100C22;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.875rem;
+  color: #F3F2F8;
+  outline: none;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+.input-modern::placeholder {
+  color: #6B638A;
+}
+.input-modern:focus {
+  border-color: #7C5CFC;
+  box-shadow: 0 0 0 3px rgba(124, 92, 252, 0.25);
+  background: #130E29;
+}
+.input-modern:hover:not(:focus) {
+  border-color: #3D3173;
+}
+
+/* Textarea / rounded-2xl variant for multiline inputs */
+.input-modern-rect {
+  width: 100%;
+  border-radius: 1rem;
+  border: 1px solid #2B2353;
+  background: #100C22;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.875rem;
+  color: #F3F2F8;
+  outline: none;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+.input-modern-rect:focus {
+  border-color: #7C5CFC;
+  box-shadow: 0 0 0 3px rgba(124, 92, 252, 0.25);
+}
+
+/* Astrix Ticker Strip Banner */
+.ticker-ribbon {
+  font-family: 'Space Grotesk', monospace, sans-serif;
+  background: #BFA5FF;
+  color: #0B0814;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+/* Pill Tabs Container */
+.pill-tab-container {
+  background: #130E28;
+  border: 1px solid #261E4E;
+  border-radius: 9999px;
+  padding: 0.35rem;
+}
+
+/* Dark scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0B0814;
+}
+::-webkit-scrollbar-thumb {
+  background: #2B2256;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #46378A;
+}
+
+::selection {
+  background: #7C5CFC;
+  color: #FFFFFF;
+}
+
+:focus-visible {
+  outline: 2px solid #7C5CFC;
+  outline-offset: 2px;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: 200%;
+  animation: marquee 25s linear infinite;
+}
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

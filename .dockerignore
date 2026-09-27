@@ -1,0 +1,9 @@
+node_modules
+*/node_modules
+.git
+.gitignore
+*.log
+backend/certificates/*.pdf
+backend/.env
+frontend/.env
+dist

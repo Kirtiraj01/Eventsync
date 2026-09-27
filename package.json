@@ -1,0 +1,19 @@
+{
+  "name": "eventsync",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build": "npm --prefix frontend run build",
+    "start": "npm --prefix backend run start",
+    "test": "npm --prefix backend run test",
+    "lint": "npm --prefix frontend run lint",
+    "frontend": "npm --prefix frontend run dev",
+    "backend": "npm --prefix backend run dev",
+    "backend:seed": "npm --prefix backend run seed",
+    "install:all": "npm --prefix frontend install && npm --prefix backend install",
+    "dev:all": "npx concurrently -n CLIENT,SERVER -c blue,green \"npm run frontend\" \"npm run backend\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}
